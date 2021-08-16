@@ -56,6 +56,7 @@ Each file contains a header that describes the data columns
 
 and the data themselves are recorded with timestamps.
 No additional information is recorded into the data file when the sampling rate changes or data collection is stopped and resumed.
+The timestamp is printed on terminal when the alphanumeric keys or 'Ctrl + c' are pressed.
 In total, the script accept 13 commands from the keyboard:
 
 - '1' - Set sample rate 1 sec;

@@ -99,7 +99,8 @@ uint32_t sampling_period = 1000;
 * Summary:
 * This is the main function for CM4 CPU. It does...
 *    1. Configure and initialize ADC.
-*    2. Every 200ms read the input voltage and display input voltage on UART.
+*    2. Every 1000ms read the input voltage and display input voltage on UART.
+*    3. Accept the command from UART to 'Stop', 'Restore' the data acquisition or change the sampling rate
 *
 * Parameters:
 *  none
@@ -145,7 +146,7 @@ int main(void)
     printf("-------------------------------------------------------------\r\n\n");
 #endif
 
-    /* Initialize Channel 0 */
+    /* Initialize ADC Channel */
     adc_single_channel_init();
 
     /* Update ADC configuration */
